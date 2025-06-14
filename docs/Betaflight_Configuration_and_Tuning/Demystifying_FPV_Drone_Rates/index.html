@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Betaflight_Configuration_and_Tuning/Demystifying_FPV_Drone_Rates" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.0">
+<title data-rh="true">Швидкості обертання | Переклад FPV літератури від Victory Drones</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://smsnvc.github.io/public-fpv-manuals-ua/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://smsnvc.github.io/public-fpv-manuals-ua/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://smsnvc.github.io/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/Demystifying_FPV_Drone_Rates"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Швидкості обертання | Переклад FPV літератури від Victory Drones"><meta data-rh="true" name="description" content="Стисле посилання на цей переклад//bit.ly/LiangFPVRatesBetaflight"><meta data-rh="true" property="og:description" content="Стисле посилання на цей переклад//bit.ly/LiangFPVRatesBetaflight"><link data-rh="true" rel="icon" href="/public-fpv-manuals-ua/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://smsnvc.github.io/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/Demystifying_FPV_Drone_Rates"><link data-rh="true" rel="alternate" href="https://smsnvc.github.io/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/Demystifying_FPV_Drone_Rates" hreflang="en"><link data-rh="true" rel="alternate" href="https://smsnvc.github.io/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/Demystifying_FPV_Drone_Rates" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Betaflight","item":"https://smsnvc.github.io/public-fpv-manuals-ua/docs/category/betaflight"},{"@type":"ListItem","position":2,"name":"Швидкості обертання","item":"https://smsnvc.github.io/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/Demystifying_FPV_Drone_Rates"}]}</script><link rel="alternate" type="application/rss+xml" href="/public-fpv-manuals-ua/blog/rss.xml" title="Переклад FPV літератури від Victory Drones RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/public-fpv-manuals-ua/blog/atom.xml" title="Переклад FPV літератури від Victory Drones Atom Feed"><link rel="stylesheet" href="/public-fpv-manuals-ua/assets/css/styles.6b39c26e.css">
+<script src="/public-fpv-manuals-ua/assets/js/runtime~main.b8430d83.js" defer="defer"></script>
+<script src="/public-fpv-manuals-ua/assets/js/main.9983d9e9.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/public-fpv-manuals-ua/img/logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/public-fpv-manuals-ua/"><div class="navbar__logo"><img src="/public-fpv-manuals-ua/img/logo.png" alt="Логотип сайту" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/public-fpv-manuals-ua/img/logo.png" alt="Логотип сайту" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Переклад FPV літератури від Victory Drones</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/public-fpv-manuals-ua/docs/category/для-початківців">Статті і методички</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/public-fpv-manuals-ua/docs/category/для-початківців">Для початківців</a><button aria-label="Expand sidebar category &#x27;Для початківців&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/public-fpv-manuals-ua/docs/category/компоненти-дронів">Компоненти дронів</a><button aria-label="Expand sidebar category &#x27;Компоненти дронів&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/public-fpv-manuals-ua/docs/category/керування-і-відеозвязок">Керування і відеозв&#x27;язок</a><button aria-label="Expand sidebar category &#x27;Керування і відеозв&#x27;язок&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/public-fpv-manuals-ua/docs/category/інструменти-для-збірки-і-ремонтів">Інструменти для збірки і ремонтів</a><button aria-label="Expand sidebar category &#x27;Інструменти для збірки і ремонтів&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/public-fpv-manuals-ua/docs/category/прошивки-і-протоколи">Прошивки і протоколи</a><button aria-label="Expand sidebar category &#x27;Прошивки і протоколи&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/public-fpv-manuals-ua/docs/category/betaflight">Betaflight</a><button aria-label="Collapse sidebar category &#x27;Betaflight&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/Best_Settings_for_Tiny_Whoop_Optimal_Performance_Betaflight_Bluejay_FPV_and_Radio_Configurations">Налаштування для малих вупів</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/How_to_Backup_Restore_Betaflight_Configuration">Резервна копія налаштувань</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/Adjusting_Throttle_Curve_in_Betaflight_and_EdgeTX">Крива тяги</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/Betaflight_Modes_Explained_and_How_to_Setup">Режими в Betaflight</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/Betaflight_FPV_Drone_Tuning">Тонкі налаштування</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/Betaflight_Filtering_101">Фільтрування в Betaflight</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/How_to_Setup_Betaflight_Firmware">Як налаштувати прошивку Betaflight</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/BLHeli_S_RPM_Filtering_How_to_get_a_better_PID_Tune">Фільтрація на основі RPM моторів</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/Demystifying_FPV_Drone_Rates">Швидкості обертання</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/FPV_Drone_Doesnt_Arm">Дрон не взводиться</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/How_to_use_Betaflight_Presets">Попередні налаштування (Presets)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/Betaflight_45_Release_Notes">Що нового в 4.5?</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/How_to_Setup_Betaflight_OSD">OSD - наекранне меню</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/How_to_Setup_GPS_Rescue_Mode_in_Betaflight">GPS порятунок</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/How_to_use_Blackbox_in_Betaflight_FPV_Drones">Чорна скриня</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/Stick_Commands_for_Betaflight_iNav_and_HDZero_OSD_Menu">Керування через наекранне меню</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/How_to_Setup_RPM_Filters_in_Betaflight">RPM-фільтри у Betaflight</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/Betaflight_FeedForward_Previously_Setpoint_Weight_and_Transition">Прогнозування руху стіків</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/public-fpv-manuals-ua/docs/category/батареї-і-зарядки">Батареї і зарядки</a><button aria-label="Expand sidebar category &#x27;Батареї і зарядки&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/public-fpv-manuals-ua/docs/category/пульти-і-передавачі">Пульти і передавачі</a><button aria-label="Expand sidebar category &#x27;Пульти і передавачі&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/public-fpv-manuals-ua/docs/category/теми-для-просунутих">Теми для просунутих</a><button aria-label="Expand sidebar category &#x27;Теми для просунутих&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/public-fpv-manuals-ua/docs/intro">Розвиток компетенцій</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/public-fpv-manuals-ua/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/public-fpv-manuals-ua/docs/category/betaflight"><span>Betaflight</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Швидкості обертання</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><p>Стисле посилання на цей переклад: <a href="https://bit.ly/LiangFPVRatesBetaflight" target="_blank" rel="noopener noreferrer">https://bit.ly/LiangFPVRatesBetaflight</a></p>
+<table><thead><tr><th style="text-align:center"><img decoding="async" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAmCAYAAAB0xJ2ZAAACu0lEQVR4XuWZTW4TQRCFszDY20QC5JUvEIkVUgQWfwIiIRHALLJgh2CBBFJukUtwB67gG3AB9llmxyaIoWvSPZr5qrszNtVjA4tPiZ5nqt4re/56dqqq2inJaDyeOaoAP7fA1Z07ltT7oARL2sFbLB1frYYxnkya2tfWqKkEV+jUFzxzzPh5XyLBO9y8cav5X7Z35n/t7u6p7cAP9nj19rB6cXKnxm9zRi85lMCm3tR3bpeDNUgwHExPp9P678tP9zqftdm/va/qLN4962yz+PCo1uknhxLYBJxweyLfZGS/hseHD1Q40allOX56CfQ3759IrXN6yqEEGk5wHtF6QdOWyOEg3pgphxJouAQ0boXVITCXsylNW0LjlvgeF8yVQgl+CMq0FbFj15LQh5lSKKH4ACKmLQl9mCmFEkoOQI5RGrYm9GKmFErwA/hC8xbQbAlCL2ZKoYQAzVtAsyUIvZgnhRICNG8BzZbA9/rGPCmU8C8MgFlyKCFA8xbQbAmkD7PkUILgilzQvAU0uw7yAMS64JR5cijBD4BFTZCHFQbqA+v0YMZMKZRQcgACw8V4/fG+2m9VmCmFEkoPgM/wCnerzH3WgZlSKKH0AASG7nFcrwwzpVCC23lZ+mlw/vBuHZy6IT+ZK4USIsX+OpgpB8PXq7XbiJwbjj4f6MPHPWAF2tszaAoOQDXeNAzch7Avw8bYygHICjBDrUqoxcBkqwZgEbxNq/acwdUARpdvbJSpIWGAP0XOGaE2g8cGoAyVRi6318eT+i0RzVsR7jHkfQXDb3wAwvNF2UXSgO93HB3AqNAS2FVceVtsSKtvZwjNt1/67q+N/OzlgYcmSxP6RwcwNDQ3FOGtdDOA0QbO/rE7uiHxPupLowygyOpPDhoamvavYCM//3VXhiwRHxsbgEBDQxNWnTrXxP+R3xA/HK0ZR9NoAAAAAElFTkSuQmCC" width="64" height="38" class="img_ev3q"></th><th style="text-align:left">Нижче вичитаний людьми машинний український переклад оригіналу. Для <a href="https://www.victory-drones.com/" target="_blank" rel="noopener noreferrer">VictoryDrones</a> переклад вичитали: Faina, Samsonovych!.</th></tr></thead></table>
+<header><h1>Пояснення коефіцієнтів FPV-дронів: Betaflight і ACTUAL</h1></header>
+<p>14 листопада 2022 р</p>
+<p><strong>Зміст</strong></p>
+<p><a href="#%D1%80%D0%BE%D0%B7%D1%83%D0%BC%D1%96%D0%BD%D0%BD%D1%8F-%D0%BA%D0%BE%D0%B5%D1%84%D1%96%D1%86%D1%96%D1%94%D0%BD%D1%82%D1%96%D0%B2-actual">Розуміння коефіцієнтів ACTUAL	5</a></p>
+<p><a href="#%D1%87%D1%83%D1%82%D0%BB%D0%B8%D0%B2%D1%96%D1%81%D1%82%D1%8C-%D1%86%D0%B5%D0%BD%D1%82%D1%80%D1%83">Чутливість центру	6</a></p>
+<p><a href="#%D0%BC%D0%B0%D0%BA%D1%81.-%D0%BA%D0%BE%D0%B5%D1%84%D1%96%D1%86%D1%96%D1%94%D0%BD%D1%82">Макс. коефіцієнт	7</a></p>
+<p><a href="#%D0%B5%D0%BA%D1%81%D0%BF%D0%BE">Експо	9</a></p>
+<p><a href="#%D0%BD%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%BA%D0%BE%D0%B5%D1%84%D1%96%D1%86%D1%96%D1%94%D0%BD%D1%82%D1%96%D0%B2-actual">Налаштування коефіцієнтів ACTUAL	10</a></p>
+<p><a href="#%D0%BF%D0%B5%D1%80%D0%B5%D0%B3%D0%BB%D1%8F%D0%B4-%D0%BA%D0%BE%D0%B5%D1%84%D1%96%D1%86%D1%96%D1%94%D0%BD%D1%82%D1%96%D0%B2-betaflight"><strong>Перегляд коефіцієнтів Betaflight	11</strong></a></p>
+<p><a href="#rc-%D0%BA%D0%BE%D0%B5%D1%84%D1%96%D1%86%D1%96%D1%94%D0%BD%D1%82">RC Коефіцієнт	11</a></p>
+<p><a href="#rc-%D0%B5%D0%BA%D1%81%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82a">RC Експонентa	14</a></p>
+<p><a href="#%E2%80%9C%D1%81%D1%83%D0%BF%D0%B5%D1%80%E2%80%9D-%D0%BA%D0%BE%D0%B5%D1%84%D1%96%D1%86%D1%96%D1%94%D0%BD%D1%82">“Супер” коефіцієнт	16</a></p>
+<p><a href="#%D0%BD%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%BA%D0%BE%D0%B5%D1%84%D1%96%D1%86%D1%96%D1%94%D0%BD%D1%82%D1%96%D0%B2-betaflight">Налаштування коефіцієнтів Betaflight	18</a></p>
+<p><a href="#%D0%BF%D0%BE%D1%81%D0%BB%D1%96%D0%B4%D0%BE%D0%B2%D0%BD%D1%96%D1%81%D1%82%D1%8C"><strong>Послідовність	20</strong></a></p>
+<p><a href="#%D1%81%D0%B5%D1%80%D0%B5%D0%B4%D0%BD%D1%8F-%D1%82%D0%BE%D1%87%D0%BA%D0%B0-%D1%82%D1%8F%D0%B3%D0%B8-%D1%96-%D0%B5%D0%BA%D1%81%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%86%D1%96%D0%B9%D0%BD%D1%96%D1%81%D1%82%D1%8C-%D1%82%D1%8F%D0%B3%D0%B8"><strong>Середня точка тяги і Експоненційність тяги	20</strong></a></p>
+<p><a href="#tpa-%D1%82%D0%B0-%D1%82%D0%BE%D1%87%D0%BA%D0%B0-%D0%B7%D1%83%D0%BF%D0%B8%D0%BD%D0%BA%D0%B8-tpa"><strong>TPA та точка зупинки TPA	20</strong></a></p>
+<p><img decoding="async" loading="lazy" alt="Betaflight Rc Rate Super Rate Expo Pid" src="/public-fpv-manuals-ua/assets/images/Demystifying_FPV_Drone_Rates_image_2-6a396bba43c6ad013991563f6745250e.png" width="536" height="335" class="img_ev3q"><img decoding="async" loading="lazy" src="/public-fpv-manuals-ua/assets/images/Demystifying_FPV_Drone_Rates_image_3-fc3825610609065fd894657c0c0923c6.png" width="558" height="314" class="img_ev3q"></p>
+<p>Ласкаво просимо до цього всебічного підручника, де ми досліджуємо тонкощі коефіцієнтів Betaflight (RC коефіцієнт, «супер»-коефіцієнт <em>[Коефіцієнт]</em> та RC Eкспонента), а також коефіцієнтів ACTUAL (коефіцієнт Чутливості центру стіка, Макс. коефіцієнт та Експо-коефіцієнт). Крім того, я поділюся своїм особистим розумінням того, як я коригую свої коефіцієнти відповідно до різних стилів польоту та застосувань.</p>
+<p><em>Деякі посилання на цій сторінці є партнерськими. Я [автор англомовної версії Оскар Ланг] отримую комісію (без додаткових витрат для вас), якщо ви робите покупку після натискання одного із цих партнерських посилань. Це допомагає підтримувати безкоштовний контент для спільноти на цьому веб-сайті. Будь ласка, прочитайте нашу <a href="https://oscarliang.com/affiliate-program-policy/" target="_blank" rel="noopener noreferrer">Політику партнерських посилань</a> для отримання додаткової інформації.</em></p>
+<p>Точне налаштування коефіцієнтів є так само важливим, як <a href="https://oscarliang.com/pid-filter-tuning-blackbox/" target="_blank" rel="noopener noreferrer">налаштування PID і фільтрів</a> для оптимізації продуктивності Betaflight вашого FPV-дрона. Ви будете вражені значними покращеннями у якості польоту, адаптувавши коефіцієнти відповідно до свого унікального стилю та вимог.</p>
+<p><img decoding="async" loading="lazy" src="/public-fpv-manuals-ua/assets/images/Demystifying_FPV_Drone_Rates_image_4-a4d3b8db98732380135ffe7372eb3688.png" width="624" height="315" class="img_ev3q"><img decoding="async" loading="lazy" src="/public-fpv-manuals-ua/assets/images/Demystifying_FPV_Drone_Rates_image_5-5f689657ab3ba035178b2583ca13427e.png" width="592" height="319" class="img_ev3q"></p>
+<p>Betaflight пропонує загалом п’ять систем коефіцієнтів:</p>
+<ol>
+<li>
+<p>Коефіцієнти ACTUAL</p>
+</li>
+<li>
+<p>Коефіцієнти Betaflight</p>
+</li>
+<li>
+<p>Коефіцієнти Raceflight</p>
+</li>
+<li>
+<p>Коефіцієнти KISS</p>
+</li>
+<li>
+<p>Коефіцієнти QuickRates</p>
+</li>
+</ol>
+<p>Однак найпоширенішими є коефіцієнти ACTUAL та коефіцієнти Betaflight.</p>
+<p>У цьому підручнику ми розглянемо ключові функції коефіцієнтів ACTUAL і коефіцієнтів Betaflight, як вони працюють і як я особисто їх налаштовую. Важливо вибрати єдину систему коефіцієнтів для роботи, і моя рекомендація для новачків полягає в тому, щоб почати з дефолтних “за замовчуванням” – коефіцієнтів ACTUAL. Це також добре підходить для досвідчених пілотів.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="розуміння-коефіцієнтів-actual"><strong>Розуміння коефіцієнтів ACTUAL</strong><a href="#розуміння-коефіцієнтів-actual" class="hash-link" aria-label="Direct link to розуміння-коефіцієнтів-actual" title="Direct link to розуміння-коефіцієнтів-actual">​</a></h2>
+<p>«ACTUAL-коефіцієнти» — це коефіцієнти за замовчуванням у Betaflight, які забезпечують простий підхід до встановлення <strong>максимальної кутової швидкості</strong> (наприклад, значення 1000 відповідає 1000 градусів/с) і значень <strong>чутливостi центру</strong>. І нічого не треба вигадувати, бо ця система є набагато інтуїтивнішою, зрозумілою та менш заплутаною для пілотів порівняно зі старішими коефіцієнтами Betaflight.</p>
+<p>Якщо ви новачок, я б рекомендував користуватись коефіцієнтами ACTUAL. Якщо ви використовуєте інший тип коефіцієнтів, в інтернеті є багато конвертерів коефіцієнтів, які дозволяють переводить один тип коефіцієнтів в інший.</p>
+<p>Існує три коефіцієнти ACTUAL: <strong>Чутливість центру стіка</strong>, <strong>Макс. коефіцієнт</strong>, <strong>Експо</strong>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="чутливість-центру"><strong>Чутливість центру</strong><a href="#чутливість-центру" class="hash-link" aria-label="Direct link to чутливість-центру" title="Direct link to чутливість-центру">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Betaflight Actual Rate Center Sensitivity" src="/public-fpv-manuals-ua/assets/images/Demystifying_FPV_Drone_Rates_image_6-bcb3537e562cabd2089b4f0a187baea4.png" width="447" height="429" class="img_ev3q"><img decoding="async" loading="lazy" src="/public-fpv-manuals-ua/assets/images/Demystifying_FPV_Drone_Rates_image_7-9c6e93038a1fcf059f931f05cb45a541.png" width="361" height="453" class="img_ev3q">Чутливість центру** пов’язана з чутливістю навколо центрального положення стіка. Менше значення забезпечує точніше та плавніше керування, тоді як більше значення забезпечує збільшену реакцію дрона на рух стіка.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="макс.-коефіцієнт"><strong>Макс. коефіцієнт</strong><a href="#макс.-коефіцієнт" class="hash-link" aria-label="Direct link to макс.-коефіцієнт" title="Direct link to макс.-коефіцієнт">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Betaflight Actual Rates Max Rate" src="/public-fpv-manuals-ua/assets/images/Demystifying_FPV_Drone_Rates_image_8-bcfdfdb6eebb3e2f8cc7fe3822cd49ba.png" width="425" height="411" class="img_ev3q"><img decoding="async" loading="lazy" src="/public-fpv-manuals-ua/assets/images/Demystifying_FPV_Drone_Rates_image_9-7913d49633633a8dcb56fa7fbd2ccc79.png" width="387" height="483" class="img_ev3q"></p>
+<p><strong>Maкс. коефіцієнт</strong> визначає швидкість обертів при повному відхиленні стіка. Введене число є точним максимальним значенням кутової швидкостi. Наприклад, число 700 означає, що ваш дрон намагатиметься обертатися зі швидкістю 700 градусів/с при повному відхиленні стіка.</p>
+<p>Але майте на увазі, що максимальна кутова швидкість може бути обмежена  потужністю моторів. Коли мотори досягають своїх фізичних обмежень і не можуть обертатися швидше, максимальна кутова швидкість обмежується незалежно від значення, встановленого в Betaflight.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="експо"><strong>Експо</strong><a href="#експо" class="hash-link" aria-label="Direct link to експо" title="Direct link to експо">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Betaflight Actual Rates Expo" src="/public-fpv-manuals-ua/assets/images/Demystifying_FPV_Drone_Rates_image_10-75161a891a01a723f3ece39296a74fa4.png" width="429" height="415" class="img_ev3q"><img decoding="async" loading="lazy" src="/public-fpv-manuals-ua/assets/images/Demystifying_FPV_Drone_Rates_image_11-8632dc371c3da57519b7b3426c84652f.png" width="411" height="519" class="img_ev3q"></p>
+<p><strong>Експо</strong> вирівнює криву між центральним положенням стіку і повним відхиленням стіку <em>[прим. пер.: збільшення Експо притискає криву біля центрального положення, робить криву більш горизонтальною біля центру]</em>. Щоб гонщикам досягти більшої рівномірності, вони тримають <strong>Експо</strong> на низькому рівні. Для збільшення більш пологої центральної зони і для кращої контрольованості – збільшіть <strong>Експо</strong>. Майте на увазі, що збільшення <strong>Експо</strong> також зменшує <strong>Чутливість центру стіка</strong>. Хоча <strong>Експо</strong> може досягати 1,0, надмірне <strong>Експо</strong> може спричинити малу <strong>Чутливість центру стіка</strong> та зробити реакцію дрона більш непередбачуваною при повному відхиленні стіка (більш смиканою).</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="налаштування-коефіцієнтів-actual"><strong>Налаштування коефіцієнтів ACTUAL</strong><a href="#налаштування-коефіцієнтів-actual" class="hash-link" aria-label="Direct link to налаштування-коефіцієнтів-actual" title="Direct link to налаштування-коефіцієнтів-actual">​</a></h3>
+<p>Почніть із встановлення <strong>Чутливості центра</strong>. Політайте навколо, спробуйте політати через ворота і отвори, щоб перевірити бажану точність керування навколо центру стіку. Для точних налаштувань і точної прицільності попадання у ворота та отвори необхідна хороша точність керування дроном. Якщо <strong>Чутливість центру</strong> надто висока, дрон буде надміру реагувати та вібрувати.</p>
+<p>Далі встановіть <strong>Макс. коефіцієнт</strong>, виконуючи фліпи і роли. Цей крок має бути відносно простим.</p>
+<p>Нарешті, відпрацюйте рухи у вільному стилі, використовуючи різні положення стіка від центральної позиції до повного відхилення. Щоб згладити криву коефіцієнтів, додайте <strong>Експо</strong>, але майте на увазі, що це може зменшити передбачуваність в положеннях, коли стік відхилено подалі від центру. Якщо ви збільшите <strong>Експо</strong>, вам може знадобитися трохи підвищити <strong>Чутливість центру</strong>, щоб це компенсувати. Налаштування <strong>Експо</strong> – це, перш за все, ваші особисті уподобання.</p>
+<p>Корисна порада: спробуйте вищiй <strong>Макс. коефіцієнт</strong> никання, щоб зменшити потребу в значних рухах стіку для никання. Цей підхід може допомогти в контролi тяги, бо надмірний рух стіку никання може ускладнити керування.</p>
+<p>Ось загальні вказівки щодо різних стилів польоту та застосування на основі мого особистого досвіду:</p>
+<ul>
+<li>
+<p>Кінематографічний: Чутливість центру 50-150</p>
+</li>
+<li>
+<p>Фрістайл: Чутливість центру 100-200</p>
+</li>
+<li>
+<p>Перегони / Польоти в зоні прямої видимості: Чутливість центру 150-300</p>
+</li>
+</ul>
+<p>Потім встановіть Макс. коефіцієнт відповідно до вашого стилю польоту:</p>
+<ul>
+<li>
+<p>Кінематографічний/перегони: Макс. коефіцієнт 500-800</p>
+</li>
+<li>
+<p>Фрістайл:  Макс. Коефіцієнт 600-1000</p>
+</li>
+<li>
+<p>Перегони: Макс. Коефіцієнт 1000+</p>
+</li>
+</ul>
+<p><strong>Мої коефіцієнти фрістайлу:</strong></p>
+<ul>
+<li>
+<p>Чутливість центру: 180</p>
+</li>
+<li>
+<p>Макс. коефіцієнт: 750</p>
+</li>
+<li>
+<p>Експо: 0,56</p>
+</li>
+</ul>
+<p>Зверніть увагу, що мої коефіцієнти відрізняються залежно від того <a href="https://oscarliang.com/pinch-thumb-stick/" target="_blank" rel="noopener noreferrer">як я тримаю пальцями</a> стік. Коли тримаю стік двома пальцями, кофіцієнти, як правило, вищі, тоді а коли рухаю їх тільки великим пальцем, то це призводить до нижчих показників.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="перегляд-коефіцієнтів-betaflight"><strong>Перегляд коефіцієнтів Betaflight</strong><a href="#перегляд-коефіцієнтів-betaflight" class="hash-link" aria-label="Direct link to перегляд-коефіцієнтів-betaflight" title="Direct link to перегляд-коефіцієнтів-betaflight">​</a></h2>
+<p>Коефіцієнти Betaflight, на відміну від коефіцієнтів ACTUAL, є дещо складнішими, оскільки три коефіцієнти взаємозалежні, що робить їх менш інтуїтивно зрозумілими у використанні. Однак, оскільки Betaflight є найстарішою системою коефіцієнтів, багато досвідчених пілотів продовжують покладатися на них.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rc-коефіцієнт"><strong>RC Коефіцієнт</strong><a href="#rc-коефіцієнт" class="hash-link" aria-label="Direct link to rc-коефіцієнт" title="Direct link to rc-коефіцієнт">​</a></h3>
+<p>Графік <strong>RC</strong> <strong>Коефіцієнтy</strong> <em>[Коефіцієнт реакції пульта RC]</em> має лінійний характер по всьому діапазону руху стіка і визначає швидкість обертів за повного відхилення стіка. Якщо ви знайомі з комп’ютерами,то це як налаштування чутливості миші.</p>
+<p>Більше число призводить до чутливішого, але і більш смиканого квадрокоптера. Невеликі рухи стіком призведуть до значних рухів квадрокоптеру. Збільшення <strong>RC Kоефіцієнту</strong> також збільшує швидкість обертів, забезпечуючи швидкі роли і фліпи.</p>
+<p><img decoding="async" loading="lazy" alt="Betaflight Rc Rate Angular Velocity" src="/public-fpv-manuals-ua/assets/images/Demystifying_FPV_Drone_Rates_image_12-35d645e615e8a3755dbaa97ad06b38c5.png" width="807" height="373" class="img_ev3q"></p>
+<p>Однак майте на увазі, що максимальна кутова швидкість може бути обмежена потужністю моторiв. Коли мотори досягають своїх фізичних обмежень і не можуть обертатися швидше, максимальна кутова швидкість обмежується, незалежно від вищого значення, встановленого в Betaflight.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rc-експонентa"><strong>RC Експонентa</strong><a href="#rc-експонентa" class="hash-link" aria-label="Direct link to rc-експонентa" title="Direct link to rc-експонентa">​</a></h3>
+<p><strong>RC Експонентa</strong> <em>[Коефіцієнт експоненти реакції пульта]</em>, також відомий як RC Експо або <strong>RC</strong> <strong>Експонентa</strong>, зменшує чутливість поблизу центру стіка, де потрібне точне керування (для нахилу, тангажу і никання), але не змінює максимальну кутову швидкість при повному відхиленню стіка.</p>
+<p><strong>RC Експонентa</strong> – це відсоткове значення в діапазоні від 0% (0) до 100% (1). При 0% збільшення кутової швидкості між максимальним і мінімальним вхідним значенням стіка має лінійний характер у вигляді “V” з відсутнім вхідним значенням стіку в самому центральному положенні. При 50% відхилення стіку квадропоптер обертатиметься навколо заданої осі рівно з половиною максимальної швидкості обертання.</p>
+<p><img decoding="async" loading="lazy" alt="Betaflight Rc Expo Curve Slope Center Stick Sensitivity" src="/public-fpv-manuals-ua/assets/images/Demystifying_FPV_Drone_Rates_image_13-43614f248f265d87e05b6968d5556fd7.png" width="786" height="364" class="img_ev3q"></p>
+<p>Збільшення <strong>RC Експоненти</strong> зменшує чутливість навколо центрального положення стіку, вимагаючи подальших рухів стіку для досягнення тієї самої швидкості обертання. Уявіть собі <strong>RC Експоненту</strong> як перетворення форми «V» на «U», i при цьому вищий відсоток експонування згладжує «U» навколо центру.</p>
+<h3></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="“супер”-коефіцієнт"><strong>“Супер” коефіцієнт</strong><a href="#“супер”-коефіцієнт" class="hash-link" aria-label="Direct link to “супер”-коефіцієнт" title="Direct link to “супер”-коефіцієнт">​</a></h3>
+<p><strong>“Супер” коефіцієнт</strong> (або просто <strong>Kоефіцієнт</strong>) збільшує як максимальну кутову швидкість, так і чутливість навколо центру стіку.</p>
+<p><img decoding="async" loading="lazy" alt="Betaflight Super Rate Effects" src="/public-fpv-manuals-ua/assets/images/Demystifying_FPV_Drone_Rates_image_14-461fabd91647b6d36b438a6f0b79e2cd.png" width="441" height="412" class="img_ev3q"></p>
+<p>Підвищивши <strong>Kоефіцієнт</strong>, ви будете здатні підтримувати помірну чутливість стіку ближче до центру для стандартних маневрів польоту, і все одно зможете робити швидкі фліпи і роли, коли стік відхиляється на максимум.</p>
+<p><strong>Kоефіцієнт</strong> по суті поєднує в собі ефекти <strong>RC Коефіцієнтy</strong> і <strong>RC Експонeти</strong>, забезпечуючи більшу гнучкість у досягненні бажаного відчуття контролю стіку.</p>
+<p><img decoding="async" loading="lazy" alt="Betaflight Rc Rate Expo Super Rate Curve Effects" src="/public-fpv-manuals-ua/assets/images/Demystifying_FPV_Drone_Rates_image_15-c96f9b76d4c2182bc716a6cd43cce024.png" width="412" height="385" class="img_ev3q"></p>
+<p>Tо навіщо використовувати <strong>Коефіцієнт</strong>? Чи не можемо просто використовувати <strong>RC</strong> <strong>Коефіцієнт</strong> i <strong>RC</strong> <strong>Експоненту</strong>? Hачебто так, але <strong>Kоефіцієнт</strong> додає нам гнучкості в досягненні бажаної чутливості стіка.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="налаштування-коефіцієнтів-betaflight"><strong>Налаштування коефіцієнтів Betaflight</strong><a href="#налаштування-коефіцієнтів-betaflight" class="hash-link" aria-label="Direct link to налаштування-коефіцієнтів-betaflight" title="Direct link to налаштування-коефіцієнтів-betaflight">​</a></h3>
+<p>Налаштування в кінцевому рахунку залежить від особистих уподобань і «відчуттів».</p>
+<p>Почніть зі стандартних значень Betaflight: <strong>RC Коефіцієнт</strong> 1.0, <strong>Коефіцієнт</strong>  0.7,<br>
+<strong>RC</strong> <strong>Експонента</strong> 0 – для всіх трьох осей.</p>
+<p>Налаштовуючи коефіцієнти, я завжди спочатку коригую <strong>RC Коефіцієнт</strong>. Виконуйте фліпи і роли, а якщо квадрокоптер обертається надто повільно, збільшуйте <strong>RC Коефіцієнт</strong>, доки результат вас не задовільнить. Внесіть максимальну кутову швидкiсть (град/сек) у конфігуратор Betaflight. Для фрістайлу я зазвичай прагну приблизно до 700-800 градусів за секунду.</p>
+<p>Далі просто політайте (без фліпів і ролів) і переконайтеся, що квадрокоптер швидко й передбачувано реагує на рухи стіку під час поворотів. Якщо він занадто чутливий для точного руху, збільшіть <strong>RC</strong> <strong>Експоненту</strong>. Якщо він надто повільний, і через це його рухи не точні (недостатнья чутливість), зменшіть <strong>Коефіцієнт</strong>, одночасно збільшуючи <strong>RC Коефіцієнт</strong>, щоб компенсувати та збільшити максимальну кутову швидкість.</p>
+<p><strong>RC</strong> <strong>Експонентa</strong> не завжди потрібнa, бо <strong>Коефіцієнт</strong> може забезпечити такий самий ефект. Але якщо дрібні рухи навколо центральної позиції стіку є занадто чутливими, то збільшуйте <strong>RC</strong> <strong>Експоненту</strong> аж поки не досягнете хорошого балансу між чутливістю і точністю.</p>
+<p><em>Професійна порада: налаштування кривої / RC Експоненти на пульті (TX) зменшує роздільну здатність стіку, тому завжди встановлюйте RC Експоненту в програмному забезпеченні польотного контролеру</em> [“польотніку”]<em>, коли це можливо, а не в пульті!</em></p>
+<p>Можливо, вам доведеться повторити цей процес кілька разів, доки показники не стануть ідеальними. Пам’ятайте, що коефіцієнти тангажу, нахилу i никання не обов’язково повинні бути ідентичними — пілоти фрістайлу часто віддають перевагу вищим показникам нахилу і рискання, але нижчому тангажу — це все особисте.</p>
+<p>Різне програмне забезпечення польотного контролеру має різні діапазони та масштабування PID, <strong>Коефіцієнтів</strong> і <strong>RC</strong> <strong>Експонент</strong>, тому однакові цифри не обов’язково дають однакові результати в різних прошивках. Вам треба буде знайти в інтернеті калькулятор для конвертації коефіцієнтів з однієї систему в іншу, якщо ви хочете перейти на іншу мікропрограму польотного контролеру.</p>
+<p>Щоб дати вам <strong>деякі приклади</strong>, Kоефіцієнти і RC Експоненти, які я використовував у минулому:</p>
+<p><strong>Фрістайл</strong></p>
+<ul>
+<li>
+<p>RC Коефіцієнт– 1,3</p>
+</li>
+<li>
+<p>RC Експонентa – 0,25</p>
+</li>
+<li>
+<p>Коефіцієнт – 0,68</p>
+</li>
+</ul>
+<p><strong>Плавний політ:</strong></p>
+<ul>
+<li>
+<p>RC Коефіцієнт = 0,80</p>
+</li>
+<li>
+<p>RC Експонентa = 0,00</p>
+</li>
+<li>
+<p>Коефіцієнт = 0,65</p>
+</li>
+</ul>
+<p>Експо навмисно встановлено на нуль, щоб уникнути надмірної реакції в близьких ситуаціях і фактично дає вам загальний плавний результат.</p>
+<p><strong>Агресивна акробатика:</strong></p>
+<ul>
+<li>
+<p><strong>RC Коефіцієнт</strong>, тангаж / нахил = 1,80, рисканняникання = 2,00</p>
+</li>
+<li>
+<p><strong>Коефіцієнт</strong>, все = 0,64</p>
+</li>
+<li>
+<p><strong>RC Експонентa</strong>, тангаж / нахил = 0,20, рискання= 0,15</p>
+</li>
+</ul>
+<p><strong>Малі вупи</strong></p>
+<ul>
+<li>
+<p>нахил+тангаж: <strong>RC Коефіцієнт</strong> 1.2, <strong>Коефіцієнт</strong> 0.75, <strong>RC Експонентa</strong> 0</p>
+</li>
+<li>
+<p>РисканняНикання: <strong>RC Коефіцієнт</strong> 1.3, <strong>Коефіцієнт</strong> 0.80 <strong>RC Експонентa</strong> 0</p>
+</li>
+<li>
+<p>Якщо використовується акрорежим, увімкніть crash_recovery, є деякі параметри ( “crash_” в інтерфейсi командного рядка), які ви можете спочатку налаштувати, щоб уникнути помилкового самовирівнювання <em>[прим. пер.: коли польотний контролер вирівнює дрона після зіткнення, схожим чином як діє режим “кут”/angle mode]</em>.</p>
+</li>
+</ul>
+<p>Коли ваші навички польоту покращаться, і вам стане легше виконувати агресивні маневри, ви можете спробувати підвищити швидкість. І ви також, ймовірно, захочете використовувати трохи більше експоненти, щоб підтримувати точне тонке керування.</p>
+<p>Не існує правильних чи неправильних значень Експонент та Коефіцієнтів, якщо це вам підходить. Наприклад, у мене тремтять пальці, тому у мене Експонентa може бути трохи вищe, ніж в інших людей. <!-- -->:p</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="послідовність"><strong>Послідовність</strong><a href="#послідовність" class="hash-link" aria-label="Direct link to послідовність" title="Direct link to послідовність">​</a></h2>
+<p>Для розвитку м’язової пам’яті вкрай важливо підтримувати постійні коефіцієнти на всіх ваших квадрокоптерах. Особливо це стосується никання і нахилу, оскільки звичні коефіцієнти дають змогу інстинктивно контролювати ці рухи. Коли ви змінюєте коефіцієнти, адаптація до іншого відчуття може зайняти деякий час, залежно від вашого досвіду пілота. Таким чином, використання постійних коефіцієнтів допомагає переключатись на інші квадрокоптери без сюрпризів.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="середня-точка-тяги-і-експоненційність-тяги"><strong>Середня точка тяги і Експоненційність тяги</strong><a href="#середня-точка-тяги-і-експоненційність-тяги" class="hash-link" aria-label="Direct link to середня-точка-тяги-і-експоненційність-тяги" title="Direct link to середня-точка-тяги-і-експоненційність-тяги">​</a></h2>
+<p>Експоненціальність тяги змінює форму кривої тяги, згладжуючи її навколо Середньої точки тяги. Це забезпечує м’яку реакцію на тягу та максимальну роздільну здатність на цьому рівні тяги.</p>
+<p>Середня точка тяги регулює положення на кривій тяги, де застосовано Експоненційність тяги. За замовчуванням встановлено 50% тяги (0,50), але якщо ви плануєте використовувати Експоненційність тяги, Середню точку тяги треба встановити на тягу «основної швидкості» <em>[прим. пер.: швидкості, на якій ви зазвичай літаєте і де вам потрібен найбільш точний контроль за тягою]</em>. Саме тут вам знадобиться найбільша роздільна здатність, і Експоненційність тяги може полегшити вам контролювання висоти.</p>
+<p>Cередня точка тяги не матиме жодного ефекту, якщо ви встановите Експоненційність тяги на 0, оскільки ваша крива тяги залишатиметься прямою лінією незалежно від налаштування Середньої точки тяги.</p>
+<p>Крім того, ви можете налаштувати <a href="https://oscarliang.com/throttle-curve/" target="_blank" rel="noopener noreferrer">криву</a> тяги <a href="https://oscarliang.com/throttle-curve/" target="_blank" rel="noopener noreferrer">у вашому</a> передавачі для ще точнішого контролю тяги.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tpa-та-точка-зупинки-tpa"><strong>TPA та точка зупинки TPA</strong><a href="#tpa-та-точка-зупинки-tpa" class="hash-link" aria-label="Direct link to tpa-та-точка-зупинки-tpa" title="Direct link to tpa-та-точка-зупинки-tpa">​</a></h2>
+<p>Хоча TPA <em>[Послаблення ПІД-коефіцієнтів при великих відхиленнях стіку тяги: throttle PID attenuation]</em> і точка зупинки TPA <em>[TPA Breakpoint]</em> не мають прямого стосунку до коефіцієнтів, вони присутні в профілі Коефіцієнтів, тому їх варто згадати.</p>
+<p>TPA використовується для зменшення коливань, викликаних ПІД у високому діапазоні тяги. Це знижує &quot;Д&quot;-коефіцієнт на певний відсоток; чим вище тягa, тим більше послаблюється ПІД.</p>
+<p>Точка зупинки TPA визначає рівень тяги за якого &quot;Д&quot;-коефіціент починає зменшуватись. Варто встановити її трохи нижче за рівень тяги, коли починаються вібрації.</p>
+<p><a href="http://intofpv.com/t-what-is-tpa-in-cleanflight-betaflight" target="_blank" rel="noopener noreferrer">Зверніться до цієї статті для більш детального пояснення TPA</a>.</p>
+<p><strong>Історія редагування</strong></p>
+<ul>
+<li>Вересень 2015 р. – Стаття створена</li>
+<li>Березень 2018 р. – Оновлено статтю про TPA, середню середню точку тяги та</li>
+<li>Березень 2021 р. – додано інформацію про нову функцію в Betaflight: ACTUAL</li>
+<li>Вересень 2022 р. – оновлені скріншоти, оновлені інструкції з налаштування коефіцієнтів</li>
+<li>Листопад 2022 р. – відредаговано, щоб більше зосередитися на ACTUAL Betaflight</li>
+<li>Березень 2023 р. – спрощена URL-адреса, оптимізована назва</li>
+</ul>
+<p><strong>КОМЕНТАРІ</strong></p>
+<p><strong>5LI3RET</strong></p>
+<p>15 червня 2021 р. - 18:45</p>
+<p>У мене питання щодо коефіцієнтів. Я поставив свої коефіцієнти в Betaflight 4.2, і з цим немає проблем, але потім я літаю, і коли я переглядаю параметри коефіцієнтів в окулярах dji, і там є різні коефіцієнти, я встановлюю BF4.2. Здається, немає різниці, що я роблю в BF, окуляри dji завжди показують ті самі стандартні коефіцієнти ... Що це може буть? Дуже дякую!<br>
+<a href="https://oscarliang.com/rates/#comment-81902" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>OSCAR</strong></p>
+<p>15 червня 2021 р. - 23:41</p>
+<p>Переконалися, що ви вибрали правильний профіль коефіцієнтів в Betaflight? Є 3 профілі.</p>
+<p><a href="https://oscarliang.com/rates/#comment-22894" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>QUENTIN</strong></p>
+<p>24 грудня 2019 р. - 14:59</p>
+<p>Привіт, Оскар<br>
+<!-- -->Чи є помилка в налаштуваннях Плавний політ?<br>
+<!-- -->У вас RC Експо все = 0,03<br>
+<!-- -->Хіба це не має бути 0,3? Хіба такий низький Експо забезпечить вам Плавний політ?<br>
+<a href="https://oscarliang.com/rates/#comment-22558" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>OSCAR</strong></p>
+<p>3 січня 2020 р. - 14:30 год</p>
+<p>Для мене Eкспо — це додаткові налаштування до Коефіцієнту, якщо Коефіцієнт низький, вам не потрібно багато Eкспо, інакше це зробить центр стіку малочутливим. Крім того, Коефіцієнт також діє як Eкспо: якщо його підняти вище, то воно буде діяти як Експо.<br>
+<a href="https://oscarliang.com/rates/#comment-22603" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>RAJEEV GOPAL</strong></p>
+<p>10 вересня 2019 р. - 18:28</p>
+<p>Вітаю, щоб отримати 700 градусів, яку комбінацію RC Коефіцієнтy i Kоефіцієнтy слід надати для фрістайлу? І робить плавні фліпи і роли. Я літаю на 2-дюймовому мікро.<br>
+<a href="https://oscarliang.com/rates/#comment-21669" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>OSCAR</strong></p>
+<p>10 вересня 2019 р. - 18:50 год</p>
+<p>Існує нескінченна кількість комбінацій… але я б вибрав RC Коефіцієнт 1.3 і Коефіцієнт 0.65-0.67<br>
+<a href="https://oscarliang.com/rates/#comment-21684" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>ROBERTO</strong></p>
+<p>26 березня 2019 року - 10:35 год</p>
+<p>Оскар, чи є якийсь файл Excel, який генерує таблицю коефіцієнтів, як у BF, на основі вхідних параметрів: RC Коефіцієнт, Коефіцієнт, RC Експо? Я хотів би створити його, але важко знайти правильні формули<br>
+<a href="https://oscarliang.com/rates/#comment-20581" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>OSCAR</strong></p>
+<p>1 квітня 2019 р. - 12:56 год</p>
+<p>Найкраще налаштувати це прямо квадрокоптері, бо бува що реакція квадрокоптера трохи відрізняється від значень, що пропонують у GUI <em>[графічному інтерфейсі користувача]</em>, бо це дуже залежить від продуктивності моторів, пропелрів, ЕКШ [електронний контролер швидкості “регуль”] та батарей<br>
+<a href="https://oscarliang.com/rates/#comment-20627" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>RENATO</strong></p>
+<p>28 вересня 2018 р. - 22:36 год</p>
+<p>Дякую тобі. Чому в деяких квадрокоптерах максимальна швидкість градусів/сек никання є меншою або більшою, незважаючи на те, що швидкості тангажу, нахилу і никання однакові? Дякую<br>
+<a href="https://oscarliang.com/rates/#comment-19051" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>OSCAR</strong></p>
+<p>1 жовтня 2018 р. - 16:58</p>
+<p>Це лише приблизне значення, фактичні швидкості обертання залежать від ваших пропелерів і мотора, а також від того, наскільки добре батарея забезпечує живлення.<br>
+<a href="https://oscarliang.com/rates/#comment-19082" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>MARTIN</strong></p>
+<p>10 серпня 2018 р. - 19:57</p>
+<p>Привіт.<br>
+<!-- -->Я новачок у цьому хобі, і я щойно купив Taranis qx7, але стік тяги не дає тяги, поки стік не досягне 50% ходу (посередині). Ви знаєте, як це змінити?</p>
+<p>З повагою Мартін.<br>
+<a href="https://oscarliang.com/rates/#comment-18517" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>OSCAR</strong></p>
+<p>11 серпня 2018 р. - 16:33</p>
+<p>Це буде не просто відповісти, будь ласка, приєднайтеся до нашого форуму для подальшого вирішення проблем. (<a href="http://intofpv.com/" target="_blank" rel="noopener noreferrer">http://intoFPV.com</a>)<br>
+<a href="https://oscarliang.com/rates/#comment-18535" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>JAMES WALLO</strong></p>
+<p>20 березня 2018 р. - 14:22</p>
+<p>Привіт… Я хотів би знати, чи передавач DUEL RATE є тим самим, що FC RC RATE? Чи треба мені встановити як DUEL RATE у моєму передавачі, так і RC RATE у моєму betaflight на 100? Дякую. Джим<br>
+<a href="https://oscarliang.com/rates/#comment-17068" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>SARCOISE</strong></p>
+<p>25 квітня 2018 р. - 05:36</p>
+<p>@JAMES WALLO</p>
+<p>Як зазначено у статті, вам НЕ слід використовувати будь-які коефіцієнти чи параметри експо на вашому передавачу TX, дозвольте польотному контролеру читати ваші фактичні вхідні дані стіку та встановлювати всі експо/коефіцієнти за допомогою конфігуратора. Параметри TX expo були необхідні якби ви користувались сервоприводами і поверхнями керування польотом, наприклад, в апаратах із нерухомим крилом або вертольотом, але вони не потрібні при використанні «польотнікa» FC, який дозволяє програмувати їх зсередини. Гіроскоп «польотнікa» FC здатний визначати швидкість, з якою модель робе рол чи фліп, у градусах за секунду, і використовує налаштування коефіцієнт/експо, щоб забезпечити постійну швидкість обертання.</p>
+<p>Крім того, було б важко встановити бажаний коефіцієнт, якби обидва і «польотнік» FC і передавач TX виконували розрахунки експо. В ідеалі у вас були б зручні для вас цифри коефіцієнтів/експо, і ви могли б ввести ці цифри на будь-якій новій збірці як відправну точку. Таким чином, у вас буде встановлена ​​частота обертання, і ви звикнете перевертатись на 360 градусів за час <em>x</em>, дозволяючи вам «відчувати», коли фліп чи рол завершено, і вам не доведеться використовувати візуальне підтвердження.<br>
+<a href="https://oscarliang.com/rates/#comment-17461" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>SUPERNULL</strong></p>
+<p>15 березня 2017 року - 20:05 год</p>
+<p>Зараз березень 2017 року, і деякі речі, здається, помінялись. Наприклад, коли ви пишете «Я особисто не використовую expo або використовую невеликий expo (&lt;10)», експо тяги тепер від 0 до 1, тому &lt;10 буде &lt;0,1 сьогодні, чи не так? Крім того, коли ви пишете про середню точкy тяги, «Вам потрібно використовувати це з певною експо тяги, інакше вона нічого не дасть». Чи це твердження досі актуальне? Отже, якщо я хочу використовувати середню точкy тяги, мені потрібно встановити експо приблизно на 0,05? Дякую!<br>
+<a href="https://oscarliang.com/rates/#comment-13960" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>OSCAR</strong></p>
+<p>24 березня 2017 р. - 00:16 год</p>
+<p>Так, ви маєте рацію, ці мікропрограми постійно змінюються, тому неможливо відстежити та оновити всі статті <!-- -->:D<br>
+<!-- -->Але я спробую, коли матиму час! дякую за коментар!</p>
+<p><a href="https://oscarliang.com/rates/#comment-16750" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>DAVE</strong></p>
+<p>13 лютого 2017 року - 20:04</p>
+<p>Чоловіче, нещодавно я зацікавився польотом на квадрокоптерах. Для початку я отримав JJRC1000A, і просто навчитися змусити цю чортову річ зависати було кошмаром. Мені знадобилося кілька тижнів перш ніж я міг зручно літати ним у моїй вітальні, постійно не стукаючи об стіни та двері!!</p>
+<p>Тоді я пішов і купив Syma X5C, яким, як мені здається, набагато легше керувати, я можу без проблем круїзувати на природі з Syma.</p>
+<p>Але тепер я хотів перейти до чогось більшого та кращого, також у мого тата є Phantom 4 Pro, на якому я мав нагоду кілька разів літати, і це був неймовірний досвід, однак одна річ з Phantom змусила замислитись, я думав, що з цими дронами високого класу, такими як DJI, правий стiк, який керує нахилом ліво-правo, завжди залишатиметься ліворуч і праворуч незалежно від орієнтації дронів, тому ви можете просто подивитися на свій дисплей, підключений до вашого контролера i дізнатись орієнтацію безпілотників, я завжди думав, що так буде для польотів FPV, чи я щось не зрозумів?</p>
+<p>Я шукав по всій мережі, щоб спробувати знайти відповідь на це питання, але, здається, я взагалі нічого не можу знайти, тому я сподіваюся, що ви можете просвітити мене тут.</p>
+<p>Я маю на увазі, що людям, які літають у FPV крізь будівлі навколо дерев тощо, не потрібно думати, коли й де ці елементи керування будуть змінені, я подумав, що ви можете використовувати дисплей на контролері P4 для FPV замість окулярів??<br>
+<a href="https://oscarliang.com/rates/#comment-13776" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>CHRIS</strong></p>
+<p>26 березня 2017 року - 11:03 год</p>
+<p>Якщо я вас правильно зрозумів, ви хочете сказати, що орієнтація Phantom щодо пілота контролює напрямок нахилу і тангажу, що рухає дрон? Якщо так, це називається headless mode <em>[безголовим режимом].</em> Зазвичай він використовується лише для польотів у зоні прямої видимості, тому що, як ви сказали, це заплутує fpv. Я керував Phantom 3 pro (iirc), але він цього не робив, я підозрюю, що це налаштування можна ввімкнути або вимкнути десь у лабіринті програми dji. Але не питайте мене, як, я не маю уявлення, як ці речі працюють :)<br>
+<a href="https://oscarliang.com/rates/#comment-14070" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>BRIAN</strong></p>
+<p>2 травня 2018 р. - 19:09</p>
+<p>Це називається headless режим. незалежно від орієнтації дрона, він завжди повертатиметься назад, якщо ви рухатимете стік в цьому напрямку. Це налаштування.<br>
+<a href="https://oscarliang.com/rates/#comment-17532" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>JOE</strong></p>
+<p>29 січня 2017 р. - 02:41</p>
+<p>Привіт, дякую за допомогу, але в мене є запитання. я змінив свої коефіцієнти, але я не можу зрозуміти як зробити, щоб нахил просто рухав квадрокоптер ліво-право, а не вгору. 3араз мій нахил і тангаж рухаються одночасно, спричиняючи рух вгору під час спроби зробити нахил вправо. чи є спосіб налаштувати квадрокоптер так, щоб нахил і тангаж не працювали разом?<br>
+<a href="https://oscarliang.com/rates/#comment-13637" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>OSCAR</strong></p>
+<p>4 лютого 2017 р. - 10:47 год</p>
+<p>ні, вони не повинні рухатися одночасно, якщо ви лише контролюєте тангаж або нахил <!-- -->:D<br>
+<!-- -->ти враховуєш кут нахилу камери? бо може здаватись, що дрон і піднімається і робе нахил, коли ви робите нахил...<br>
+<a href="https://oscarliang.com/rates/#comment-13669" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a></p>
+<p><strong>ROBIN</strong></p>
+<p>25 квітня 2016 року - 10:33 год</p>
+<p>Коефіцієнти - це нове для мене. Маю 3 налаштування режимів (вибираються за допомогою 3-позиційного перемикача на TX)<br>
+<!-- -->Кут і горизонт «відчуваються» добре, але коли я переходжу до акро, я відчуваю, що це потребує невеликої експо<br>
+<!-- -->-можливо, це суміш того, що я новачок у літанні акро, а зона нечутливості датчиків встановлена ​​на 6 через тремтіння… в основному я «новачок», хоча :)<br>
+<!-- -->Я вмію літати на гелікоптері, тож мене трохи здивувало, що мені трохи важко, але мій квадрокоптер 250 здається більш реактивним/смиканим, ніж мій вертоліт Trex250!</p>
+<p>Я додав деякі експо на TX для AIL та ELE (15%), але лише коли вибрано acro, і це, здається, дуже допомагає, і я міг би дозволити собі трохи знизити його – я не бачу, як застосувати лише expo в режимі «акро» в Cleanflight і не чипати кут та горизонт, тож, мабуть, поки що я збираюся використовувати цей метод і повільно зменшувати, доки не досягну швидкості та точності BanniUK.. (У моїх мріях! )<br>
+<!-- -->Мета – це відлучити себе від горизонту <!-- -->:D<br>
+<a href="https://oscarliang.com/rates/#comment-11270" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>OSCAR</strong></p>
+<p>28 квітня 2016 року - 12:05 год</p>
+<p>Єдиний спосіб, який я бачу, це мати окремий профіль для різних режимів… але насправді вам слід звикнути до режиму акро та повністю забути про режим самовирівнювання :) Усі найкращі пілоти користуються лише режимами коефіцієнтів.</p>
+<p><a href="https://oscarliang.com/rates/#comment-11715" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>SPENCER</strong></p>
+<p>15 березня 2016 року - 23:54</p>
+<p>Гей Оскар,</p>
+<p>Ви допомагали мені незліченну кількість разів у минулому, але в цьому випадку ваш пост був шкідливим.</p>
+<p>mmix тепер базується на нулі замість 1. Якщо ви визначите мікси моторів, починаючи з 1, вони не підтверджуватимуться, доки ви не вкажете двигун 0 mmmix. Це може бути дуже заплутаним, виходячи з вашого підручника. Також дуже корисно знати ці налаштування:</p>
+<p>мікс на замовлення<br>
+<!-- -->mmix ресет</p>
+<p>І, нарешті, цей веб-сайт допоміг мені розібратися з проблемою, яка у мене виникла... тож кредит: iforce2d.net/mixercalc/</p>
+<p>Спенсер<br>
+<a href="https://oscarliang.com/rates/#comment-10206" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>OSCAR</strong></p>
+<p>16 березня 2016 р. - 01:04</p>
+<p>ти правильний пост коментуєш? Здається, я не говорив про мікс у цій статті?<br>
+<!-- -->Я припускаю, що ви маєте на увазі публікацію «спеціальний мікс моторiв»… яку було написано ще на початку 2015 року… cleanflight продовжує мінятись (зокрема змінив назву функції), будучи блогером неповний робочий день, я намагався зробити все можливе, щоб оновлювати його… але іноді я просто не встигаю… тому, якщо виникла якась плутанина, я прошу вибачення.</p>
+<p>Я також був би дуже вдячний, якщо б ви могли вказати, яка частина статті є неправильною… Я вже давно не використовую mmix, і починаю забувати про деякі деталі.</p>
+<p><a href="https://oscarliang.com/rates/#comment-10207" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a></p>
+<p><strong>MIKE</strong></p>
+<p>13 грудня 2015 року - 22:56</p>
+<p>Привіт, Оскар<br>
+<!-- -->Я новачок у квадрокоптерах. Щойно виготовлений 280 із двигунами Scorpion, BL Heli 20 amp esc, Naze 32 ver6, dx8 tx, Orange 615x із використанням ppm та налаштуваннями Clean Flight. На прискореннi ніс підіймається. Я повторно перевірив налаштування та результати ті самі. На вкладці двигунів у cleanflight двигуни не з’являються навіть за використання передавача, але з’являються y master motor tab.<br>
+<!-- -->З чого мені почати шукати проблему.<br>
+<!-- -->Дякую<br>
+<!-- -->Майк<br>
+<a href="https://oscarliang.com/rates/#comment-8605" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>TODD BROWN</strong></p>
+<p>5 серпня 2016 р. - 2:28 ранку</p>
+<p>Почніть із простих речей. Ви робили калібрування тяги?<br>
+<a href="https://oscarliang.com/rates/#comment-12157" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>PAUL</strong></p>
+<p>19 вересня 2015 року - 19:32</p>
+<p>Привіт Оскар,<br>
+<!-- -->Ви впевнені, що середня точка тяги має ефект, якщо експо вимкнено?</p>
+<p>Мій міні-квадрокоптер має співвідношення потужності до ваги 7:1, і у мене проблема з аварією при приземленні :) Я пробував зробити тягу на 20% і 80%, і, здається, це не мало жодного ефекту. Я використовую luxfloat…<br>
+<a href="https://oscarliang.com/rates/#comment-6663" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>OSCAR</strong></p>
+<p>21 вересня 2015 року - 15:00 год</p>
+<p>вибачте, так, я мав згадати, що середня точка тяги ефективна лише тоді, коли ви коли ви її застосовуєте разом з експо тяги :)<br>
+<a href="https://oscarliang.com/rates/#comment-6704" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a></p>
+<p><strong>ONDREJ</strong></p>
+<p>15 вересня 2015 р. - 09:26</p>
+<p>Привіт Оскар,<br>
+<!-- -->Останнім часом я грався з коефіцієнтами Y/P/R <em>[никання/ нахил/ тангаж]</em>. Я шукав значення чисел і все ще не міг це зрозуміти. На форумі CF я неодноразово знаходив, що коефіцієнти Y/P/R є множником. Не впевнений що це так, оскільки значення за замовчуванням дорівнює 0, наскільки я пам’ятаю. Чи знаєте ви, як ці коефіцієнти обробляються в ПІД?<br>
+<a href="https://oscarliang.com/rates/#comment-6530" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>OSCAR</strong></p>
+<p>16 вересня 2015 р. - 16:01</p>
+<p>Привіт, <strong>ONDREJ</strong>, як я вже згадував у дописі, це залежить від ПІД-контролерів, ці показники необов’язково впливають на ПІД.<br>
+<!-- -->для PID C 1 і 2 вони впливають лише на чутливість стіку, Множинник зовсім не значить що ви множите значення стіку на значення швидкості, зовсім не так :)<br>
+<!-- -->Не знаю що ви хочте досягти, просто збільшуйте або зменшуйте значення, де вважаєте за потрібне :) для звичайних користувачів, як я… я бачу, що немає потреби копати глибше, якщо ви не розробник або у вас є величезні проблеми з ним...<br>
+<a href="https://oscarliang.com/rates/#comment-6575" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>HOLGER</strong></p>
+<p>14 вересня 2015 року - 21:14</p>
+<p>Я завжди вважав, що рекомендується встановлювати Expo в Tx, а не в FC. Більшість професійних пілотів, здається, взагалі не торкаються налаштувань Expo в Cleanflight.<br>
+<a href="https://oscarliang.com/rates/#comment-6517" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>OSCAR</strong></p>
+<p>16 вересня 2015 р. - 15:34</p>
+<p>Привіт, Холгере, кожен має свій власний спосіб, a кінцевий результат у будь-якому разі схожий, де б ви його не встановили…<br>
+<a href="https://oscarliang.com/rates/#comment-6570" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>HOLGER</strong></p>
+<p>16 вересня 2015 року - 20:43</p>
+<p>Мені була цікава ця тема, і я отримав детальне пояснення від joshuabardwell про те, чому варто віддати перевагу FC expo над Tx expo: rcgroups.com/forums/showpost.php?p=32705942&amp;postcount=999<br>
+<a href="https://oscarliang.com/rates/#comment-6590" target="_blank" rel="noopener noreferrer">ВІДПОВІДЬ</a><br>
+<strong>OSCAR</strong></p>
+<p>21 вересня 2015 року - 12:40 год</p>
+<p>це хорошe:) дякую, що поділилися!</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/smsnvc/fpv-manuals-ua/blob/master/docs/05_Betaflight_Configuration_and_Tuning/Demystifying_FPV_Drone_Rates.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/BLHeli_S_RPM_Filtering_How_to_get_a_better_PID_Tune"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Фільтрація на основі RPM моторів</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/public-fpv-manuals-ua/docs/Betaflight_Configuration_and_Tuning/FPV_Drone_Doesnt_Arm"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Дрон не взводиться</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#розуміння-коефіцієнтів-actual" class="table-of-contents__link toc-highlight"><strong>Розуміння коефіцієнтів ACTUAL</strong></a><ul><li><a href="#чутливість-центру" class="table-of-contents__link toc-highlight"><strong>Чутливість центру</strong></a></li><li><a href="#макс.-коефіцієнт" class="table-of-contents__link toc-highlight"><strong>Макс. коефіцієнт</strong></a></li><li><a href="#експо" class="table-of-contents__link toc-highlight"><strong>Експо</strong></a></li><li><a href="#налаштування-коефіцієнтів-actual" class="table-of-contents__link toc-highlight"><strong>Налаштування коефіцієнтів ACTUAL</strong></a></li></ul></li><li><a href="#перегляд-коефіцієнтів-betaflight" class="table-of-contents__link toc-highlight"><strong>Перегляд коефіцієнтів Betaflight</strong></a><ul><li><a href="#rc-коефіцієнт" class="table-of-contents__link toc-highlight"><strong>RC Коефіцієнт</strong></a></li><li><a href="#rc-експонентa" class="table-of-contents__link toc-highlight"><strong>RC Експонентa</strong></a></li><li><a href="#“супер”-коефіцієнт" class="table-of-contents__link toc-highlight"><strong>“Супер” коефіцієнт</strong></a></li><li><a href="#налаштування-коефіцієнтів-betaflight" class="table-of-contents__link toc-highlight"><strong>Налаштування коефіцієнтів Betaflight</strong></a></li></ul></li><li><a href="#послідовність" class="table-of-contents__link toc-highlight"><strong>Послідовність</strong></a></li><li><a href="#середня-точка-тяги-і-експоненційність-тяги" class="table-of-contents__link toc-highlight"><strong>Середня точка тяги і Експоненційність тяги</strong></a></li><li><a href="#tpa-та-точка-зупинки-tpa" class="table-of-contents__link toc-highlight"><strong>TPA та точка зупинки TPA</strong></a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Про проєкт</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/public-fpv-manuals-ua/docs/intro">Вступне слово</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Соцмережі</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.facebook.com/victorydrones.ua/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Facebook<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.victory-drones.com/discord" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.instagram.com/victory_drones/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Instagram<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.youtube.com/@victorydrones" target="_blank" rel="noopener noreferrer" class="footer__link-item">YouTube<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://whatsapp.com/channel/0029VaG49ecGufIxG1CL1C14" target="_blank" rel="noopener noreferrer" class="footer__link-item">WhatsApp<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://x.com/VictoryDrones" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Додаткові ресурси</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/public-fpv-manuals-ua/blog">Блог перекладачів</a></li><li class="footer__item"><a href="https://dignitas.fund/uk/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Фонд Dignitas<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Сайт зроблено в рамках проєкту Victory Drones. 2025.</div></div></div></footer></div>
+</body>
+</html>
